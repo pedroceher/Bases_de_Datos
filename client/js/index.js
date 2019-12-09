@@ -28,10 +28,14 @@ class Login {
       data: form_data,
       type: 'POST',
       success: function(php_response){
-        if (php_response.msg == "OK") {
-          window.location.href = 'main.html';
-        }else {
-          alert(php_response.msg);
+        if (php_response.conexion=="OK") {
+          if (php_response.acceso == 'concedido') {
+            window.location.href = 'main.html';
+          }else {
+            alert(php_response.motivo);
+          }
+        }else{
+          alert(php_response.conexion);
         }
       },
       error: function(){

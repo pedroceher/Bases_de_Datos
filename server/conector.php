@@ -39,6 +39,7 @@
     }
 
     function ejecutarQuery($query){
+
       return $this->conexion->query($query);
     }
 
@@ -104,7 +105,7 @@
       }
     return $this->ejecutarQuery($sql);
     }
-    
+
     function getConexion(){
       return $this->conexion;
     }

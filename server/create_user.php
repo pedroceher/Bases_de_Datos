@@ -1,6 +1,6 @@
 <?php
 //Este archivo es para dar de alta tres usuarios en la base de datos
-include('conector.php');
+require('conector.php');
 $tabla = 'usuarios';
 $campos =['nombre','psw','email','fecha_nacimiento'];
 $data =array(
