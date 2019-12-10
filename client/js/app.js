@@ -6,7 +6,6 @@ class EventsManager {
         this.obtenerDataInicial()
     }
 
-
     obtenerDataInicial() {
         let url = '../server/getEvents.php'
         $.ajax({
@@ -202,7 +201,6 @@ $(function(){
     e.anadirEvento()
   })
 });
-
 
 
 function initForm(){

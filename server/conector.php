@@ -154,22 +154,6 @@
       return $this->ejecutarQuery($sql);
     }
 
-    function getViajesUser($user_id){
-      $sql = "SELECT co.nombre AS ciudad_origen, cd.nombre AS ciudad_destino, v.placa AS placa, v.fabricante AS fabricante, v.referencia AS referencia, a.fecha_salida AS fecha_salida, a.fecha_llegada AS fecha_llegada, a.hora_salida AS hora_salida, a.hora_llegada AS hora_llegada
-              FROM viajes AS a
-              JOIN ciudades AS co ON co.id = a.fk_ciudad_origen
-              JOIN ciudades AS cd ON cd.id = a.fk_ciudad_destino
-              JOIN vehiculos AS v ON v.placa = a.fk_vehiculo
-              WHERE a.fk_conductor = ".$user_id.";";
-      return $this->ejecutarQuery($sql);
-    }
-
-
-
   }
-
-
-
-
 
  ?>
